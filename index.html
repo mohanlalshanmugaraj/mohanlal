@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohanlal S — Application Developer</title>
+  <meta name="description" content="Portfolio resume website for Mohanlal S, Application Developer (Android & iOS)." />
+  <style>
+    :root{
+      --bg:#0b0f14;            /* soft dark */
+      --card:#121821;          /* slightly lighter */
+      --muted:#8aa0b4;         /* muted text */
+      --text:#e6edf3;          /* main text */
+      --brand:#4fd1c5;         /* teal accent */
+      --chip:#1c2430;          /* chip bg */
+      --border:#223041;        /* card border */
+      --link:#7dd3fc;          /* link */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:grid;gap:18px;grid-template-columns:1fr;align-items:center;margin-bottom:22px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,var(--brand),#60a5fa);display:grid;place-items:center;color:#0b0f14;font-weight:800;letter-spacing:1px}
+    .title h1{margin:0;font-size:28px;letter-spacing:1px}
+    .title p{margin:2px 0 0;color:var(--muted)}
+
+    .contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .contact a,.contact span{background:var(--chip);border:1px solid var(--border);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--text)}
+
+    /* Layout */
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:960px){
+      .grid{grid-template-columns:1.2fr 2fr}
+    }
+
+    /* Cards */
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px}
+    .card h2{margin:0 0 12px;font-size:16px;letter-spacing:.4px;color:#eaf2f9}
+    .card h3{margin:0 0 6px;font-size:15px}
+    .muted{color:var(--muted)}
+
+    /* Chips */
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--chip);border:1px solid var(--border);padding:7px 10px;border-radius:10px;font-size:13px;}
+
+    /* Timeline */
+    .timeline{display:grid;gap:14px}
+    .job{padding:14px;border:1px solid var(--border);border-radius:14px;background:#0f1520}
+    .job .meta{display:flex;flex-wrap:wrap;gap:8px;color:var(--muted);font-size:13px}
+    .job ul{margin:8px 0 0 18px}
+    .job li{margin:4px 0}
+
+    /* Project list */
+    .project{padding:12px;border:1px dashed var(--border);border-radius:12px}
+    .project .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+
+    /* Footer */
+    footer{margin:24px 0 8px;color:var(--muted);text-align:center;font-size:13px}
+
+    /* Print */
+    @media print{
+      :root{--bg:#fff;--card:#fff;--text:#000;--muted:#444;--border:#bbb;--chip:#f4f6f8}
+      a{text-decoration:underline;color:#0645ad}
+      .avatar{display:none}
+      body{background:#fff}
+      .wrap{padding:0}
+      .card,.job,.project{break-inside:avoid}
+      .grid{grid-template-columns:1fr 1.6fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">MS</div>
+        <div class="title">
+          <h1>Mohanlal S</h1>
+          <p>Application Developer — Android & iOS (3.2+ years)</p>
+          <div class="contact">
+            <a href="tel:+919715947409">📞 +91 97159 47409</a>
+            <span>📍 Ondipudur, Coimbatore</span>
+            <a href="mailto:mohanlalshanmugaraj@gmail.com">✉️ mohanlalshanmugaraj@gmail.com</a>
+            <a href="https://www.linkedin.com/in/mohanlal-s-80493820b" target="_blank" rel="noopener">in/ linkedin</a>
+            <a href="https://github.com/mohanlalshanmugaraj" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Sidebar -->
+      <aside class="card">
+        <h2>Profile</h2>
+        <p class="muted">Highly skilled Application Developer with experience building native Android and iOS apps, focused on creative problem‑solving, performance, and user‑centric features.</p>
+
+        <h2>Programming Languages</h2>
+        <div class="chips">
+          <span class="chip">Swift</span>
+          <span class="chip">Kotlin</span>
+          <span class="chip">Java 17+</span>
+        </div>
+
+        <h2>Frameworks & Libraries</h2>
+        <div class="chips">
+          <span class="chip">UIKit</span>
+          <span class="chip">SwiftUI</span>
+          <span class="chip">Alamofire</span>
+          <span class="chip">Retrofit</span>
+          <span class="chip">Firebase</span>
+          <span class="chip">Unit Testing (Jest)</span>
+        </div>
+
+        <h2>Architectures</h2>
+        <div class="chips">
+          <span class="chip">MVVM</span>
+          <span class="chip">MVC</span>
+          <span class="chip">MVP</span>
+          <span class="chip">VIPER</span>
+        </div>
+
+        <h2>Local Databases</h2>
+        <div class="chips">
+          <span class="chip">Core Data</span>
+          <span class="chip">Room</span>
+          <span class="chip">SQLite</span>
+        </div>
+
+        <h2>CI/CD</h2>
+        <div class="chips">
+          <span class="chip">Xcode Cloud</span>
+          <span class="chip">Jenkins</span>
+        </div>
+
+        <h2>Version Control</h2>
+        <div class="chips">
+          <span class="chip">GitHub</span>
+          <span class="chip">Bitbucket</span>
+          <span class="chip">GitLab</span>
+        </div>
+
+        <h2>Link Integration</h2>
+        <div class="chips">
+          <span class="chip">Deep Link</span>
+          <span class="chip">Universal Link</span>
+        </div>
+
+        <h2>Tools</h2>
+        <div class="chips">
+          <span class="chip">Xcode</span>
+          <span class="chip">Android Studio</span>
+          <span class="chip">IntelliJ IDEA</span>
+          <span class="chip">VS Code</span>
+          <span class="chip">Postman</span>
+          <span class="chip">Splunk</span>
+        </div>
+
+        <h2>Education</h2>
+        <div class="project">
+          <strong>RVS College of Arts and Science, Tamil Nadu</strong>
+          <div class="muted">B.Sc (IT), 2018–2021 — 72%</div>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main class="card">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <section class="job">
+            <h3>Applications Developer — Impiger Technologies</h3>
+            <div class="meta">Dec 2022 – Present</div>
+            <ul>
+              <li>Designed and shipped features to meet client requirements and elevate UX; optimized performance with proactive monitoring via Splunk.</li>
+              <li>Wrote unit tests (Jest) and set up Jenkins pipelines to automate releases.</li>
+            </ul>
+            <div class="muted" style="margin-top:8px"><em>Key Projects</em></div>
+            <ul>
+              <li><strong>Hyundai (iOS)</strong>: H‑Promise, Test Drive, Sales — roles across sales features, Core Data, push notifications, and API integration.</li>
+              <li><strong>Hyundai (Android)</strong>: Implemented screens/features and supported evolving client requirements.</li>
+              <li><strong>Kia (iOS)</strong>: SDK implementations, API integrations, and video consultation (video calling).</li>
+              <li><strong>Kia (Android)</strong>: Resolved hypercare issues; SDK & API integration; video consultation features.</li>
+              <li><strong>TN‑Sand (iOS)</strong>: Implemented Printer SDK and feature enhancements for a government project.</li>
+              <li><strong>PPC (Android)</strong>: Built features including local DB and location tracking to improve performance and reliability.</li>
+            </ul>
+          </section>
+
+          <section class="job">
+            <h3>Mobile Developer — Zetran Technologies</h3>
+            <div class="meta">May 2021 – Dec 2022</div>
+            <ul>
+              <li>Participated in iteration planning and accurate task estimation; ensured smooth story integrations.</li>
+              <li>Implemented transaction list & detail features; maintained dashboards and customer/sales/vendor modules.</li>
+              <li>Production support and optimizations for Android; MVVM, local DBs, in‑app payments (Google Play / Apple Pay).</li>
+            </ul>
+            <div class="muted" style="margin-top:8px"><em>Key Projects</em></div>
+            <ul>
+              <li><strong>MyBooks (iOS)</strong>: Design updates, API integration, push notifications, dashboards, customer & sales modules.</li>
+              <li><strong>MyBooks (Android)</strong>: Production support and performance improvements.</li>
+              <li><strong>SNAPOS (Android)</strong>: Built from scratch over two sprints — MVVM, local DB, Google Play payments, released to Play Store.</li>
+              <li><strong>SNAPOS (iOS)</strong>: MVVM, local DB, Apple Pay, released to App Store.</li>
+            </ul>
+          </section>
+        </div>
+
+        <h2 style="margin-top:18px">Featured Packages</h2>
+        <div class="project">
+          <strong>Printer Package (iOS)</strong>
+          <p class="muted">Custom printer module for iOS applications.</p>
+          <div class="links">
+            <a href="https://github.com/mohanlalshanmugaraj/SNAPOS-Printer" target="_blank" rel="noopener">GitHub Repository</a>
+          </div>
+        </div>
+        <div class="project" style="margin-top:10px">
+          <strong>Video Player Package (iOS)</strong>
+          <p class="muted">Reusable video player components for iOS apps.</p>
+          <div class="links">
+            <a href="https://github.com/mohanlalshanmugaraj/videoPlayer-Ios" target="_blank" rel="noopener">GitHub Repository</a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      © <span id="y"></span> Mohanlal S • Built with plain HTML & CSS
+    </footer>
+  </div>
+
+  <script>
+    // Set current year unobtrusively (optional; works even if JS is disabled)
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
