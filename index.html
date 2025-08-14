@@ -7,14 +7,14 @@
   <meta name="description" content="Portfolio resume website for Mohanlal S, Application Developer (Android & iOS)." />
   <style>
     :root{
-      --bg:#0b0f14;            /* soft dark */
-      --card:#121821;          /* slightly lighter */
-      --muted:#8aa0b4;         /* muted text */
-      --text:#e6edf3;          /* main text */
-      --brand:#4fd1c5;         /* teal accent */
-      --chip:#1c2430;          /* chip bg */
-      --border:#223041;        /* card border */
-      --link:#7dd3fc;          /* link */
+      --bg:#0b0f14;            
+      --card:#121821;          
+      --muted:#8aa0b4;         
+      --text:#e6edf3;          
+      --brand:#4fd1c5;         
+      --chip:#1c2430;          
+      --border:#223041;        
+      --link:#7dd3fc;          
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
@@ -23,7 +23,14 @@
     .wrap{max-width:1100px;margin:0 auto;padding:28px}
 
     /* Header */
-    header{display:grid;gap:18px;grid-template-columns:1fr;align-items:center;margin-bottom:22px}
+    header{
+      display:grid;
+      gap:18px;
+      grid-template-columns:1fr;
+      align-items:center;
+      margin-bottom:22px;
+      position:relative;
+    }
     .brand{display:flex;gap:16px;align-items:center}
     .avatar{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,var(--brand),#60a5fa);display:grid;place-items:center;color:#0b0f14;font-weight:800;letter-spacing:1px}
     .title h1{margin:0;font-size:28px;letter-spacing:1px}
@@ -31,6 +38,25 @@
 
     .contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
     .contact a,.contact span{background:var(--chip);border:1px solid var(--border);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--text)}
+
+    /* Download Button */
+    .download-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--brand);
+      color: #0b0f14;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      transition: background 0.2s ease;
+    }
+    .download-btn:hover {
+      background: #38b2ac;
+    }
 
     /* Layout */
     .grid{display:grid;grid-template-columns:1fr;gap:18px}
@@ -91,13 +117,15 @@
           </div>
         </div>
       </div>
+      <!-- Download PDF Button -->
+      <a href="Mohanlal_Resume.pdf" download class="download-btn">⬇ Download PDF</a>
     </header>
 
     <div class="grid">
       <!-- Sidebar -->
       <aside class="card">
         <h2>Profile</h2>
-        <p class="muted">Highly skilled Application Developer with experience building native Android and iOS apps, focused on creative problem‑solving, performance, and user‑centric features.</p>
+        <p class="muted">Highly skilled Application Developer with experience building native Android and iOS apps, focused on creative problem-solving, performance, and user-centric features.</p>
 
         <h2>Programming Languages</h2>
         <div class="chips">
@@ -180,11 +208,11 @@
             </ul>
             <div class="muted" style="margin-top:8px"><em>Key Projects</em></div>
             <ul>
-              <li><strong>Hyundai (iOS)</strong>: H‑Promise, Test Drive, Sales — roles across sales features, Core Data, push notifications, and API integration.</li>
+              <li><strong>Hyundai (iOS)</strong>: H-Promise, Test Drive, Sales — roles across sales features, Core Data, push notifications, and API integration.</li>
               <li><strong>Hyundai (Android)</strong>: Implemented screens/features and supported evolving client requirements.</li>
               <li><strong>Kia (iOS)</strong>: SDK implementations, API integrations, and video consultation (video calling).</li>
               <li><strong>Kia (Android)</strong>: Resolved hypercare issues; SDK & API integration; video consultation features.</li>
-              <li><strong>TN‑Sand (iOS)</strong>: Implemented Printer SDK and feature enhancements for a government project.</li>
+              <li><strong>TN-Sand (iOS)</strong>: Implemented Printer SDK and feature enhancements for a government project.</li>
               <li><strong>PPC (Android)</strong>: Built features including local DB and location tracking to improve performance and reliability.</li>
             </ul>
           </section>
@@ -195,7 +223,7 @@
             <ul>
               <li>Participated in iteration planning and accurate task estimation; ensured smooth story integrations.</li>
               <li>Implemented transaction list & detail features; maintained dashboards and customer/sales/vendor modules.</li>
-              <li>Production support and optimizations for Android; MVVM, local DBs, in‑app payments (Google Play / Apple Pay).</li>
+              <li>Production support and optimizations for Android; MVVM, local DBs, in-app payments (Google Play / Apple Pay).</li>
             </ul>
             <div class="muted" style="margin-top:8px"><em>Key Projects</em></div>
             <ul>
@@ -231,7 +259,6 @@
   </div>
 
   <script>
-    // Set current year unobtrusively (optional; works even if JS is disabled)
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
